@@ -14,6 +14,16 @@ Per Windows è disponibile il comando `color.reset()` che resetta il colore dell
 In oltre e disponibile una funzione `cl()` che permette di pulire la console sia su Win/Unix
 
 ***
+Per implementare i colori in più sistemi utilizzare il seguente template:
+
+`
+Color color;
+#ifdef _WIN32
+  color.foreground(RED);
+#elif defined (__APPLE__) || defined(__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
+  cout<<color.foreground(RED);
+#endif`
+***
 
 **TABELLA COLORI WINDOWS**
 <img width="1121" alt="Screenshot 2022-12-16 alle 16 37 10" src="https://user-images.githubusercontent.com/91205851/208135450-931a677b-3ed5-42d3-9c51-e4bacaea0673.png">
