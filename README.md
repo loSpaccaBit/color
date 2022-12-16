@@ -16,14 +16,13 @@ In oltre e disponibile una funzione `cl()` che permette di pulire la console sia
 ***
 Per implementare i colori in più sistemi utilizzare il seguente template:
 
-`
-Color color;
 
-#ifdef _WIN32
-  color.foreground(RED);
-#elif defined (__APPLE__) || defined(__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
-  cout<<color.foreground(RED);
-#endif`
+`Color color;`
+`#ifdef _WIN32`
+  `color.foreground(RED);`
+`#elif defined (__APPLE__) || defined(__LINUX__) || defined(__gnu_linux__) || defined(__linux__)`
+  `cout<<color.foreground(RED);`
+`#endif`
 ***
 
 **TABELLA COLORI WINDOWS**
