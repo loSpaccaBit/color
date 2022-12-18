@@ -20,7 +20,7 @@
 using namespace std;
 
 #ifdef _WIN32 //! colori per console Win
-#define _UTF-16 SetConsoleOutputCP(65001); // implementazione UTF-16 in Windows
+#define _UTF_16 SetConsoleOutputCP(65001); // implementazione UTF-16 in Windows
 #define BLUE 1
 #define BLUE_INTESE 9
 #define BLUE_BLACK 144
