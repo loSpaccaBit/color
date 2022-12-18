@@ -10,7 +10,7 @@
 
 ***
 
-Per Windows è disponibile il comando `color.reset()` che resetta il colore della console in bianco.
+Per Windows è disponibile il comando `color.reset()` che resetta il colore della console in bianco, e' possibile anche l'abilitazione UTF-16 con la macro `_UTF_16`.
 In oltre e disponibile una funzione `cl()` che permette di pulire la console sia su Win/Unix
 
 ***
