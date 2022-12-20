@@ -2,7 +2,7 @@
 
 * I colori utilizzati nelle macro sono Brillanti per scegliere un colore personalizzato basta seguire la seguente sintassi:
 
-> Windows `color.foreground(codiceColore` (int)
+> Windows `color.foreground(codiceColore)` (int)
 
 ***
 
