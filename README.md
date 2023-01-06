@@ -27,9 +27,11 @@ Per utilizzare i colori è possibile sotituire il codice del colore con le MACRO
 ```sh
 color.foreground(10) 
 color.foreground(GREEN)
+
+color.resize_console(80,49); // ridimensionamento console
 ```
 Per Windows è stato sviluppato anche la conversione dei caratteri UNICODE in UTF-16 ```_UF_16``` 
-
+.resize_console(int,int); 
 <br>
 
 **TABELLA COLORI WINDOWS**
@@ -39,9 +41,12 @@ Per Windows è stato sviluppato anche la conversione dei caratteri UNICODE in UT
 
 Per utilizzare i colori è possibile sotituire il codice del colore con le MACRO già sviluppate.
 ```sh
-color.foreground("10") 
-color.foreground(GREEN)
+color.foreground("10"); 
+color.foreground(GREEN);
+
+color.resize_console("80","49"); // ridimensiona la console 
 ```
+.resize_console(string,string);
 
 **TABELLA COLORI UNIX**
 ![ansiColorTable](https://user-images.githubusercontent.com/91205851/208135542-392327d4-0156-463e-a2b9-aa15f3abf769.png)
