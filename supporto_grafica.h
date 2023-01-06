@@ -20,7 +20,8 @@
 using namespace std;
 
 #ifdef _WIN32 //! colori per console Win
-#define _UTF_16 SetConsoleOutputCP(65001); // implementazione UTF-16 in Windows
+#define _UTF_16 SetConsoleOutputCP(65001);
+
 #define BLUE 1
 #define BLUE_INTESE 9
 #define BLUE_BLACK 144
@@ -118,7 +119,6 @@ using namespace std;
 
 #define YELLOW 6
 #define YELLOW_INTENSE 14
-#define YELLOW_INTENSE 96
 #define YELLOW_BLACK 224
 #define YELLOW_BLUE 225
 #define YELLOW_GREEN 226
@@ -234,6 +234,14 @@ public:
     {
         foreground(WHITE); // resetta il colore della console in bianco
     }
+    void resize_console(int h, int w)
+    {
+        HWND console = GetConsoleWindow();
+        RECT ConsoleRect;
+        GetWindowRect(console, &ConsoleRect);
+
+        MoveWindow(console, ConsoleRect.left, ConsoleRect.top, h, w, TRUE);
+    }
 #elif defined(__APPLE__) || defined(__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
 
     string foreground(string t, string out) // permette di colorare solo il testo e non
@@ -281,6 +289,11 @@ public:
         string out(1, o);
         string r = "\033[38;5;" + t + ";48;5;" + bg + "m" + out + "\033[0m";
         return r;
+    }
+    void resize_console(string h, string w)
+    {
+        cout.flush();
+        cout << "\e[8;" + w + ";" + h + "t";
     }
 #endif
 };
