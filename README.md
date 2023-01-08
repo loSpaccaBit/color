@@ -65,6 +65,17 @@ color.reset();
 #endif
 ```
 
+
+```sh
+Color color;
+#ifdef _WIN32
+color.resize_console(800,600);
+#elif defined (__APPLE__) || defined(__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
+ color.resize_console("80","49");
+#endif
+cout<<"Hello Wordl!\n";
+```
+
 ## Run 
 
 Compilare il file src/main.cpp e far partire l'eseguibile
