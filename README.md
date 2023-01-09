@@ -88,7 +88,7 @@ g++ main.cpp -o main
 👤 **Francesco Pio Nocerino**
 
 * Website: https://www.github.com/KekkoDev
-* Github: [@KekkoDEv](https://github.com/KekkoDEv)
+* Github: [@KekkoDev](https://github.com/KekkoDev)
 
 ## 🤝 Contributing
 
