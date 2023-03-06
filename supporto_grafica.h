@@ -225,6 +225,15 @@ class Color // classe color
 {
 public:
 #ifdef _WIN32
+    ostream &bold_on(std::ostream &os) //! testo in bold per win
+    {
+        return os << "\e[1m";
+    }
+
+    ostream &bold_off(std::ostream &os)
+    {
+        return os << "\e[0m";
+    }
     void foreground(int cl) // permette di colorare il testo e non, e sia di applicare uno "sfondo" al testo
     {
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
