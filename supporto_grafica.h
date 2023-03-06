@@ -235,6 +235,14 @@ public:
         fflush(stdout);
         cout << "\e[0m";
     }
+    string bold_on()
+    {
+        return "\e[1m";
+    }
+    string bold_off()
+    {
+        return "\e[0m";
+    }
     void foreground(int cl) // permette di colorare il testo e non, e sia di applicare uno "sfondo" al testo
     {
         HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
